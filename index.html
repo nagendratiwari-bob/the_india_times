@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The-India-Times</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <header>
+    <!-- <div class="container"> -->
+        <div class="header container">
+            <div id="top-left">
+                <i class="fa-solid fa-magnifying-glass icon" id="icon"></i>
+                <div class="hidden" id="tog">
+                <input type="search" placeholder="Search" id="input">
+                <button class="login" id="srcbtn">Go</button>
+                </div>
+            </div>
+            <div class="top-right">
+                 <button class="login">log in</button>
+            </div>
+            </div>
+        <!-- </div> -->
+         <div class="main-heading container">
+            <div class="day side-col">
+                 <p id="date">tuesday</p>
+                 <p>Today's Paper</p>
+            </div>
+            <div class="heading-center">
+                <h1 class="logo">The India Times</h1>
+            </div>
+            <div class="weather side-col">
+                <span>12°c,Jodhpur</span>
+            </div>
+        </div>
+        <nav class="container nav-bar">
+            <div class="hambur" id="hambur">
+                <i class="fa-solid fa-bars" id="hamIcon"></i>
+            </div>
+            <ul class="navUl" id="navUl">
+                <li class="li" id="world" onclick="onNavItems('world')">world</li>
+                <li class="li" id="politics" onclick="onNavItems('politics')">Politics</li>
+                <li class="li" id="technology" onclick="onNavItems('technology')">Tech</li>
+                <li class="li" id="cricket" onclick="onNavItems('cricket')">cricket</li>
+                <li class="li" id="business" onclick="onNavItems('business')">Business</li>
+                <li class="li" id="science" onclick="onNavItems('science')">Science</li>
+                <li class="li" id="health" onclick="onNavItems('health')">Health</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container" id="errshow">
+        <div id="loading">
+           <div class="spinner"></div>
+           <h2>Loading News... Please Wait</h2>
+        </div>
+      <div class="main-grid">
+        <section1 id= "left-grid">
+            <div id="left-upper"></div>
+            <div id="left-mid"></div>
+            <div id="left-down"></div>
+        </section1>
+        <section2 id="right-grid">
+            <div id="right-up"></div>
+            <div id="right-mid"></div>
+            <div id="right-down"></div>
+        </section2>
+        </div>
+    </main>
+
+</body>
+<script src="script.js"></script>
+</html>
