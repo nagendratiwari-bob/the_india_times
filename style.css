@@ -340,6 +340,9 @@
     .photo{
         height:200px
     }
+    .left-all{
+        width:100%;
+    }
     .let{
         display: flex;
         flex-direction: column;
