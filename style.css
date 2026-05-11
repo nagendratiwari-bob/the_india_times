@@ -341,10 +341,13 @@
         height:200px
     }
     .left-all{
-        width:100%;
+        border-right:none;
     }
     .let{
         display: flex;
         flex-direction: column;
+    }
+    #left-mid{
+        border-right:none
     }
 }
