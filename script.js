@@ -108,7 +108,7 @@ function renderNews(containerId,articles){
          }) ;
         }
         else if(containerId==='left-down'){
-          const date = new Date(art.publishedAt).toLocaleDateString("en-US",{timeZone: "Asia/Jakarta"})
+          const date = new Date(art.pub_date).toLocaleDateString("en-US",{timeZone: "Asia/Jakarta"})
           card.innerHTML = `
           <div class="left-all">
             <div class="let">
