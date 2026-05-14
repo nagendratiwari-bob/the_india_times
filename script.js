@@ -91,12 +91,12 @@ function renderNews(containerId,articles){
            const date = new Date(articles.publishedAt).toLocaleDateString()
            card.innerHTML = `
            <div class="down">
-           <div class="lMid"> 
+             <div class="lMid"> 
               <a href="${art.web_url}" target="_blank" class="link"> <h4>${art.headline.main}</h4></a>  
                 <div class="btnBrd">
               <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
-              </div>
-           </div>
+                </div>
+             </div>
              <div class="small-img">
                 <a href="${art.web_url}" target="_self"> <img src="${art.multimedia.default.url}" class="img"></a>
              </div>
@@ -235,3 +235,27 @@ const hamIcon = document.getElementById('hamIcon')
        }
 
 })
+
+const weatherFetch = async()=>{
+      try{
+        const data = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=26.2389&longitude=73.0243&current=temperature_2m,relative_humidity_2m,windspeed`);
+        const response = await data.json();
+        console.log(response);
+
+       const currData = response.current;
+       const currTemp = currData.temperature_2m;
+       const humiTemp = currData.relative_humidity_2m;
+       const windSpeed = currData.windspeed
+
+       const currUnits = response.current_units.temperature_2m
+
+       const temp = document.getElementById('temp');
+       const humid = document.getElementById('humid');
+       temp.innerHTML = ""
+       temp.innerHTML = `
+            <div>JODHPUR.  ${currTemp}${currUnits}</div>
+            <div><i class="fa-solid fa-wind"></i>${windSpeed}km/h   <i class="fa-solid fa-droplet"></i>  ${humiTemp}%</div>
+       `
+      }catch{}
+}
+weatherFetch()
